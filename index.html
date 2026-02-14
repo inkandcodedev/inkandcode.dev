@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inkAndCode.dev | Next.js Web Development & IT Solutions</title>
+  <meta name="title" content="inkAndCode.dev | Next.js Web Development & IT Solutions" />
+  <meta name="description"
+    content="Expert Web Development, Software Solutions, and Logo Design. Specializing in high-performance Next.js websites and SEO-friendly digital products." />
+  <meta name="keywords"
+    content="web development, next.js, software development, logo design, IT solutions, SEO agency, inkAndCode" />
+  <meta name="author" content="inkAndCode.dev" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://inkandcodedev.github.io/inkandcode.dev/" />
+  <meta property="og:title" content="inkAndCode.dev | Modern IT Solutions" />
+  <meta property="og:description" content="Building modern, SEO-friendly websites with Next.js and high-end design." />
+  <meta property="og:image" content="https://inkandcodedev.github.io/inkandcode.dev/images/og-image.jpg" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://inkandcodedev.github.io/inkandcode.dev/" />
+  <meta property="twitter:title" content="inkAndCode.dev | Modern IT Solutions" />
+  <meta property="twitter:description"
+    content="Building modern, SEO-friendly websites with Next.js and high-end design." />
+  <meta property="twitter:image" content="https://inkandcodedev.github.io/inkandcode.dev/images/og-image.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="selection:bg-purple-500/30">
+  <!-- Navigation Bar -->
+  <nav
+    class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl glass px-6 py-4 rounded-2xl flex justify-between items-center border border-white/10 shadow-2xl backdrop-blur-md">
+
+    <div class="font-bold tracking-tighter text-xl text-white">
+      ink&Code<span class="text-purple-500">.dev</span>
+    </div>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+      <a href="#home" class="hover:text-white transition-colors relative group">
+        Home
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#services" class="hover:text-white transition-colors relative group">
+        Services
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#about" class="hover:text-white transition-colors relative group">
+        About
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a href="#contact" class="hover:text-white transition-colors relative group">
+        Contact
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full"></span>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a href="#contact"
+        class="hidden sm:block bg-white text-black text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5">
+        Hire Us
+      </a>
+
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="absolute top-[calc(100%+16px)] left-0 w-full p-8 
+            /* Glass Background & Blur */
+            bg-black/50 backdrop-blur-[100px] backdrop-saturate-[180%]
+            /* Border & Shadow */
+            border border-white/10 shadow-2xl 
+            /* Shape & Layout */
+            rounded-[2.5rem] flex-col gap-4 hidden md:hidden z-[50] 
+            /* Animation */
+            transition-all duration-300 ease-in-out">
+
+      <a href="#home"
+        class="block py-3 text-white text-xl font-bold tracking-tight hover:text-purple-400 transition-colors">
+        Home
+      </a>
+      <a href="#services"
+        class="block py-3 text-white text-xl font-bold tracking-tight hover:text-purple-400 transition-colors">
+        Services
+      </a>
+      <a href="#about"
+        class="block py-3 text-white text-xl font-bold tracking-tight hover:text-purple-400 transition-colors">
+        About
+      </a>
+      <a href="#contact"
+        class="block py-3 text-white text-xl font-bold tracking-tight hover:text-purple-400 transition-colors">
+        Contact
+      </a>
+
+      <div class="h-px bg-white/10 my-2 w-full"></div>
+
+      <a href="#contact"
+        class="block w-full py-5 bg-purple-600 hover:bg-purple-500 text-white font-bold text-center rounded-2xl shadow-[0_10px_20px_rgba(147,51,234,0.3)] active:scale-[0.98] transition-all">
+        Hire Us
+      </a>
+    </div>
+  </nav>
+
+
+
+  <!-- Hero Section -->
+  <section id="home" class=" relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <div id="aurora-container" class="absolute inset-0 z-0"></div>
+
+    <div class="absolute inset-0 z-0 animate-stars">
+
+      <div class="star w-0.5 h-0.5 top-[10%] left-[15%]" style="--duration: 3s"></div>
+
+      <div class="star w-1 h-1 top-[40%] left-[25%]" style="--duration: 5s"></div>
+
+      <div class="star w-0.5 h-0.5 bottom-[20%] right-[30%]" style="--duration: 4s"></div>
+
+      <div class="star w-1 h-1 top-[50%] right-[10%]" style="--duration: 2s"></div>
+
+      <div class="star w-0.5 h-0.5 top-[75%] left-[20%]" style="--duration: 6s"></div>
+
+      <div class="star w-0.5 h-0.5 top-[20%] right-[20%]" style="--duration: 3.5s"></div>
+
+      <div class="star w-1 h-1 bottom-[10%] left-[40%]" style="--duration: 4.5s"></div>
+
+    </div>
+
+    <div class="absolute top-1/2 left-1/2 w-[300px] h-[300px] md:w-[700px] md:h-[700px] rounded-full animate-glow z-0">
+    </div>
+
+
+
+    <div class="relative z-10 text-center px-6 max-w-5xl">
+
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+
+        <span class="bg-[#8b5cf6] text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+
+        <span class="text-xs text-gray-300">Modern Web Solutions</span>
+
+      </div>
+
+
+
+      <h1 class="text-5xl md:text-8xl font-bold tracking-tight mb-6 leading-[1.1] text-white">
+
+        Intelligent Design for <br />
+
+        <span class="animate-text-gradient">Modern Businesses.</span>
+
+      </h1>
+
+
+
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+
+        We specialize in Next.js development, SEO friendly architectures, and
+
+        high-performance IT solutions tailored for growth.
+
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <a href="#contact"
+          class="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center gap-2 group shadow-[0_0_30px_rgba(139,92,246,0.3)]""
+
+            >
+
+              Get in touch
+
+              <i
+
+                class=" fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-1
+          group-hover:-translate-y-1 transition-transform"></i>
+
+        </a>
+
+        <a href="#services"
+          class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-10 py-4 rounded-xl font-semibold transition-all backdrop-blur-md">
+
+          View services
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-black relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4 tracking-tighter animate-text-gradient">
+          Our Services
+        </h2>
+        <p class="text-gray-500 max-w-lg mx-auto">
+          High-performance digital transformation for the next generation of
+          web builders.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="advanced-card h-[350px] p-10 rounded-[2.5rem] group" onmousemove="
+              this.style.setProperty('--x', event.offsetX + 'px');
+              this.style.setProperty('--y', event.offsetY + 'px');
+            ">
+          <div class="card-glow"></div>
+
+          <!-- Background Particles -->
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="particle w-1 h-1 top-[80%] left-[20%]" style="--duration: 4s"></div>
+            <div class="particle w-0.5 h-0.5 top-[90%] left-[50%]" style="--duration: 6s"></div>
+            <div class="particle w-1 h-1 top-[70%] left-[80%]" style="--duration: 5s"></div>
+          </div>
+
+          <div
+            class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500">
+            <i class="fa-solid fa-code text-2xl text-purple-400 group-hover:text-white"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Modern, SEO friendly websites built with
+            <span class="text-white font-medium">Next.js</span> and
+            <span class="text-white font-medium">Tailwind CSS</span> for
+            ultimate speed.
+          </p>
+
+          <div
+            class="mt-8 pt-6 border-t border-white/5 flex items-center gap-2 text-purple-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+            Learn more <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="advanced-card h-[350px] p-10 rounded-[2.5rem] group" onmousemove="
+              this.style.setProperty('--x', event.offsetX + 'px');
+              this.style.setProperty('--y', event.offsetY + 'px');
+            ">
+          <div class="card-glow"></div>
+
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="particle w-1 h-1 top-[85%] left-[30%]" style="--duration: 5s"></div>
+            <div class="particle w-0.5 h-0.5 top-[95%] left-[60%]" style="--duration: 7s"></div>
+          </div>
+
+          <div
+            class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 border border-blue-500/20 group-hover:bg-blue-500 transition-all duration-500">
+            <i class="fa-solid fa-layer-group text-2xl text-blue-400 group-hover:text-white"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Software Dev</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Custom software solutions designed to automate workflows and scale
+            your
+            <span class="text-white font-medium">business operations</span>
+            globally.
+          </p>
+
+          <div
+            class="mt-8 pt-6 border-t border-white/5 flex items-center gap-2 text-blue-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+            Learn more <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="advanced-card h-[350px] p-10 rounded-[2.5rem] group" onmousemove="
+              this.style.setProperty('--x', event.offsetX + 'px');
+              this.style.setProperty('--y', event.offsetY + 'px');
+            ">
+          <div class="card-glow"></div>
+
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="particle w-1 h-1 top-[80%] left-[10%]" style="--duration: 3s"></div>
+            <div class="particle w-1 h-1 top-[90%] left-[70%]" style="--duration: 5.5s"></div>
+          </div>
+
+          <div
+            class="w-14 h-14 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-8 border border-pink-500/20 group-hover:bg-pink-500 transition-all duration-500">
+            <i class="fa-solid fa-pen-nib text-2xl text-pink-400 group-hover:text-white"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Design & Branding</h3>
+          <p class="text-gray-400 leading-relaxed">
+            From <span class="text-white font-medium">Logo Design</span> to
+            high-impact posters, we craft a unique visual identity that
+            resonates.
+          </p>
+
+          <div
+            class="mt-8 pt-6 border-t border-white/5 flex items-center gap-2 text-pink-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+            Learn more <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-32 relative overflow-hidden bg-[#030303]">
+    <div class="mesh-bg inset-0 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
+      <div class="space-y-10">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-advanced">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Our Vision</span>
+        </div>
+
+        <h2 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9]">
+          We merge <span class="animate-text-gradient">art</span> <br />
+          <span class="text-gray-500">with logic.</span>
+        </h2>
+
+        <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
+          inkAndCode.dev was founded to provide premium IT solutions that
+          don't just work—they inspire. We believe every line of code should
+          be as beautiful as the design it supports.
+        </p>
+
+        <div class="flex flex-wrap gap-12 pt-4">
+          <div class="group">
+            <div class="text-5xl font-bold text-white mb-2 group-hover:text-purple-500 transition-colors duration-500">
+              100%
+            </div>
+            <div class="h-1 w-8 bg-purple-600 rounded-full group-hover:w-20 transition-all duration-500"></div>
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-4 font-bold">
+              Client Satisfaction
+            </p>
+          </div>
+          <div class="group">
+            <div class="text-5xl font-bold text-white mb-2 group-hover:text-purple-500 transition-colors duration-500">
+              Fast
+            </div>
+            <div class="h-1 w-8 bg-purple-600 rounded-full group-hover:w-20 transition-all duration-500"></div>
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-4 font-bold">
+              Delivery Time
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative px-4">
+        <div class="absolute -inset-10 bg-purple-600/10 blur-[100px] rounded-full"></div>
+
+        <div
+          class="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl transform hover:scale-[1.01] transition-transform duration-700">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+            class="w-full h-full object-cover opacity-60 transition-all duration-1000"
+            alt="Professional Poster Design for inkAndCode.dev IT Solutions" title="IT Solutions Poster Design" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent"></div>
+        </div>
+
+        <div
+          class="absolute -bottom-12 -left-8 md:-left-16 glass-advanced p-8 rounded-[2.5rem] max-w-[280px] animate-card-float shadow-2xl">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-purple-600/20 flex items-center justify-center">
+              <i class="fa-solid fa-quote-left text-purple-400"></i>
+            </div>
+            <div class="h-[1px] flex-grow bg-white/10"></div>
+          </div>
+          <p class="text-gray-300 italic text-sm leading-relaxed mb-6">
+            "Building the future, one pixel at a time. High-performance code
+            meets stunning design."
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-600 shadow-lg shadow-purple-500/20">
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-tighter text-gray-400">
+              inkAndCode Founder
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <!-- <section id="contact" class="py-24 bg-[#030303] text-white overflow-hidden relative">
+  
+  <div class="absolute top-1/4 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+  <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-blue-600/20 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+
+  <div class="max-w-4xl mx-auto px-6 relative z-10">
+    
+    <div class="relative group p-[1px] rounded-[2.5rem] overflow-hidden">
+      <div class="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E2E2_0%,#393BB2_50%,#E2E2E2_100%)] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+
+      <div class="glass relative bg-[#0a0a0a]/90 backdrop-blur-2xl p-8 md:p-16 rounded-[2.5rem]">
+        
+        <header class="mb-12 space-y-4">
+          <span class="text-purple-500 font-mono text-sm tracking-widest uppercase animate-bounce">Available for projects</span>
+          <h2 class="text-5xl md:text-7xl font-black tracking-tighter">
+            Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Connect.</span>
+          </h2>
+          <p class="text-gray-400 text-lg max-w-md leading-relaxed">
+            Have a vision? We have the tools. Drop us a line and let's build something legendary.
+          </p>
+        </header>
+
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="group/input">
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:bg-white/[0.07] focus:border-purple-500/50 transition-all duration-300 transform group-hover/input:-translate-y-1"
+              />
+            </div>
+            <div class="group/input">
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:bg-white/[0.07] focus:border-purple-500/50 transition-all duration-300 transform group-hover/input:-translate-y-1"
+              />
+            </div>
+          </div>
+
+          <div class="group/input">
+            <textarea
+              rows="4"
+              placeholder="Tell us about your project..."
+              class="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:bg-white/[0.07] focus:border-purple-500/50 transition-all duration-300 transform group-hover/input:-translate-y-1 resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            class="relative w-full overflow-hidden group/btn bg-white text-black font-black py-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
+          >
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover/btn:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+            <div class="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover/btn:animate-[shine_0.75s_ease-in-out]"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+  <section id="contact"
+    class="py-12 md:py-24 bg-[#030303] text-white overflow-hidden relative min-h-screen flex items-center">
+
+    <div
+      class="hidden sm:block absolute top-1/4 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-[100px] animate-pulse">
+    </div>
+    <div
+      class="hidden sm:block absolute bottom-1/4 -right-20 w-72 h-72 bg-blue-600/20 rounded-full blur-[100px] animate-pulse"
+      style="animation-delay: 2s;"></div>
+
+    <div class="w-full max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+
+      <div class="relative group p-[1px] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl">
+
+        <div
+          class="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E2E2_0%,#393BB2_50%,#E2E2E2_100%)] opacity-20 group-hover:opacity-50 transition-opacity duration-500">
+        </div>
+
+        <div class="relative bg-[#0a0a0a]/90 backdrop-blur-3xl p-6 md:p-14 rounded-[1.5rem] md:rounded-[2.5rem]">
+
+          <header class="mb-8 md:mb-12 space-y-3 md:space-y-4 text-center md:text-left">
+            <span
+              class="inline-block text-purple-400 font-mono text-xs md:text-sm tracking-[0.2em] uppercase animate-pulse">
+              Get in touch
+            </span>
+            <h2 class="text-4xl md:text-7xl font-black tracking-tighter leading-none">
+              Let's <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400">Connect.</span>
+            </h2>
+            <p class="text-gray-400 text-sm md:text-lg max-w-md mx-auto md:mx-0 leading-relaxed">
+              Have a vision? Drop us a line and let's build something legendary.
+            </p>
+          </header>
+
+          <form class="space-y-4 md:space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <div class="group/input">
+                <input type="text" required placeholder="Your Name"
+                  class="w-full bg-white/[0.04] border border-white/10 rounded-xl md:rounded-2xl px-5 py-4 md:py-5 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:bg-white/[0.08] transition-all duration-300 placeholder:text-gray-500" />
+              </div>
+              <div class="group/input">
+                <input type="email" required placeholder="Email Address"
+                  class="w-full bg-white/[0.04] border border-white/10 rounded-xl md:rounded-2xl px-5 py-4 md:py-5 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:bg-white/[0.08] transition-all duration-300 placeholder:text-gray-500" />
+              </div>
+            </div>
+
+            <div class="group/input">
+              <textarea rows="4" required placeholder="Tell us about your project..."
+                class="w-full bg-white/[0.04] border border-white/10 rounded-xl md:rounded-2xl px-5 py-4 md:py-5 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:bg-white/[0.08] transition-all duration-300 placeholder:text-gray-500 resize-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="relative w-full overflow-hidden group/btn bg-white text-black font-bold text-sm md:text-base py-4 md:py-5 rounded-xl md:rounded-2xl transition-all duration-300 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-purple-500/20">
+              <span class="relative z-10">Send Message</span>
+              <svg class="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover/btn:animate-[shine_0.8s_ease-in-out]">
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="font-bold tracking-tighter text-xl">
+        ink&Code<span class="text-purple-500">.dev</span>
+      </div>
+      <div class="text-gray-500 text-sm">
+        © 2026 ink&Code.dev. All rights reserved.
+      </div>
+      <div class="flex gap-6">
+        <a href="https://www.instagram.com/inkandcode.dev/" class="text-gray-400 hover:text-white transition"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import {
+      Renderer,
+      Program,
+      Mesh,
+      Color,
+      Triangle,
+    } from "https://cdn.skypack.dev/ogl";
+
+    const VERT = `#version 300 es
+    in vec2 position;
+    void main() { gl_Position = vec4(position, 0.0, 1.0); }
+  `;
+
+    const FRAG = `#version 300 es
+    precision highp float;
+    uniform float uTime;
+    uniform float uAmplitude;
+    uniform vec3 uColorStops[3];
+    uniform vec2 uResolution;
+    uniform float uBlend;
+    out vec4 fragColor;
+
+    vec3 permute(vec3 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
+    float snoise(vec2 v){
+      const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+      vec2 i = floor(v + dot(v, C.yy));
+      vec2 x0 = v - i + dot(i, C.xx);
+      vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+      vec4 x12 = x0.xyxy + C.xxzz; x12.xy -= i1; i = mod(i, 289.0);
+      vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+      vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy), dot(x12.zw, x12.zw)), 0.0);
+      m = m * m; m = m * m;
+      vec3 x = 2.0 * fract(p * C.www) - 1.0;
+      vec3 h = abs(x) - 0.5;
+      vec3 ox = floor(x + 0.5);
+      vec3 a0 = x - ox;
+      m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+      vec3 g; g.x = a0.x * x0.x + h.x * x0.y; g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+      return 130.0 * dot(m, g);
+    }
+
+    struct ColorStop { vec3 color; float position; };
+    #define COLOR_RAMP(colors, factor, finalColor) { \
+      int index = 0; \
+      for (int i = 0; i < 2; i++) { \
+         if (colors[i].position <= factor) index = i; \
+      } \
+      ColorStop currentColor = colors[index]; \
+      ColorStop nextColor = colors[index + 1]; \
+      float range = nextColor.position - currentColor.position; \
+      float lerpFactor = (factor - currentColor.position) / range; \
+      finalColor = mix(currentColor.color, nextColor.color, lerpFactor); \
+    }
+
+    void main() {
+      vec2 uv = gl_FragCoord.xy / uResolution;
+      ColorStop colors[3];
+      colors[0] = ColorStop(uColorStops[0], 0.0);
+      colors[1] = ColorStop(uColorStops[1], 0.5);
+      colors[2] = ColorStop(uColorStops[2], 1.0);
+      vec3 rampColor;
+      COLOR_RAMP(colors, uv.x, rampColor);
+      float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+      height = exp(height);
+      height = (uv.y * 2.0 - height + 0.2);
+      float intensity = 0.6 * height;
+      float auroraAlpha = smoothstep(0.2 - uBlend * 0.5, 0.2 + uBlend * 0.5, intensity);
+      fragColor = vec4(intensity * rampColor * auroraAlpha, auroraAlpha);
+    }
+  `;
+
+    function init() {
+      const container = document.getElementById("aurora-container");
+      if (!container) return;
+
+      const renderer = new Renderer({
+        alpha: true,
+        premultipliedAlpha: true,
+        antialias: true,
+      });
+      const gl = renderer.gl;
+      container.appendChild(gl.canvas);
+
+      let program;
+
+      function resize() {
+        const width = container.clientWidth || window.innerWidth;
+        const height = container.clientHeight || window.innerHeight;
+        renderer.setSize(width, height);
+        if (program) program.uniforms.uResolution.value = [width, height];
+      }
+
+      const geometry = new Triangle(gl);
+      if (geometry.attributes.uv) delete geometry.attributes.uv;
+
+      const colorStops = ["#4f46e5", "#8b5cf6", "#d946ef"].map((hex) => {
+        const c = new Color(hex);
+        return [c.r, c.g, c.b];
+      });
+
+      program = new Program(gl, {
+        vertex: VERT,
+        fragment: FRAG,
+        uniforms: {
+          uTime: { value: 0 },
+          uAmplitude: { value: 1.5 },
+          uColorStops: { value: colorStops },
+          uResolution: {
+            value: [container.clientWidth, container.clientHeight],
+          },
+          uBlend: { value: 0.8 },
+        },
+      });
+
+      const mesh = new Mesh(gl, { geometry, program });
+
+      function update(t) {
+        requestAnimationFrame(update);
+        program.uniforms.uTime.value = t * 0.001;
+        renderer.render({ scene: mesh });
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+      requestAnimationFrame(update);
+    }
+
+    // Ensure DOM is ready
+    if (document.readyState === "complete") {
+      init();
+    } else {
+      window.addEventListener("load", init);
+    }
+  </script>
+  <script>
+    // Simple Toggle Logic
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      });
+    });
+  </script>
+</body>
+
+</html>
